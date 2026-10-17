@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "module-03-number-sets",
+  "order": 3,
+  "unit": 3,
+  "slug": "conjuntos-numericos",
+  "title": "Conjuntos Numéricos",
+  "description": "Naturales, enteros, racionales, irracionales y reales; operaciones, radicales, logaritmos, valor absoluto, intervalos y regla de tres.",
+  "topics": [
+    {
+      "id": "conjuntos-numericos",
+      "title": "Ampliación sucesiva de los conjuntos numéricos",
+      "subtopics": ["Naturales", "Enteros", "Racionales", "Irracionales", "Reales"]
+    },
+    {
+      "id": "operaciones-reales",
+      "title": "Operaciones con números reales",
+      "subtopics": ["Suma y resta", "Multiplicación y división", "Potenciación", "Radicación", "Propiedades"]
+    },
+    {
+      "id": "radicales",
+      "title": "Radicales",
+      "subtopics": ["Suma y resta de radicales", "Multiplicación y división de radicales", "Racionalización"]
+    },
+    {
+      "id": "logaritmos-valor-absoluto-intervalos",
+      "title": "Logaritmos, valor absoluto e intervalos",
+      "subtopics": ["Logaritmo de un número real", "Valor absoluto", "Intervalos"]
+    },
+    {
+      "id": "regla-de-tres",
+      "title": "Regla de tres simple",
+      "subtopics": ["Regla de tres directa", "Regla de tres inversa"]
+    }
+  ]
+}

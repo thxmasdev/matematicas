@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "module-02-sets",
+  "order": 2,
+  "unit": 2,
+  "slug": "conjuntos",
+  "title": "Elementos de la Teoría de Conjuntos",
+  "description": "Noción de conjunto, pertenencia, representación, diagramas de Venn, inclusión y operaciones entre conjuntos.",
+  "topics": [
+    {
+      "id": "nocion-y-representacion",
+      "title": "Noción de conjunto y representación",
+      "subtopics": ["Conjunto, elemento y pertenencia", "Representación por extensión", "Representación por comprensión", "Diagramas de Venn"]
+    },
+    {
+      "id": "conjuntos-especiales",
+      "title": "Conjuntos especiales, inclusión e igualdad",
+      "subtopics": ["Conjuntos especiales", "Inclusión", "Igualdad"]
+    },
+    {
+      "id": "operaciones-conjuntos",
+      "title": "Operaciones con conjuntos",
+      "subtopics": ["Unión", "Intersección", "Complemento"]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "module-06-geometry",
+  "order": 6,
+  "unit": 6,
+  "slug": "geometria",
+  "title": "Geometría",
+  "description": "Elementos fundamentales, ángulos, triángulos, cuadriláteros, polígonos regulares, circunferencia, perímetro, área y cuerpos geométricos.",
+  "topics": [
+    {
+      "id": "elementos-y-angulos",
+      "title": "Elementos fundamentales y ángulos",
+      "subtopics": ["Elementos fundamentales de la geometría", "Ángulos y sistemas de medición"]
+    },
+    {
+      "id": "figuras-planas",
+      "title": "Figuras planas",
+      "subtopics": ["Triángulos: clasificación y propiedades", "Cuadriláteros: clasificación y propiedades", "Polígonos regulares", "Circunferencia y círculo", "Perímetro y área"]
+    },
+    {
+      "id": "cuerpos-geometricos",
+      "title": "Cuerpos geométricos",
+      "subtopics": ["Clasificación", "Área", "Volumen", "Uso de la calculadora"]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "module-04-relations-functions",
+  "order": 4,
+  "unit": 4,
+  "slug": "relaciones-y-funciones",
+  "title": "Relaciones y Funciones",
+  "description": "Pares ordenados, producto cartesiano, relaciones, funciones y ecuaciones de primer y segundo grado.",
+  "topics": [
+    {
+      "id": "pares-y-relaciones",
+      "title": "Pares ordenados, producto cartesiano y relaciones",
+      "subtopics": ["Par ordenado", "Producto cartesiano", "Relaciones", "Funciones"]
+    },
+    {
+      "id": "primer-grado",
+      "title": "Función y ecuaciones de primer grado",
+      "subtopics": ["Función de primer grado", "Ecuaciones de primer grado con una incógnita", "Sistemas de dos ecuaciones con dos incógnitas"]
+    },
+    {
+      "id": "segundo-grado",
+      "title": "Función y ecuaciones de segundo grado",
+      "subtopics": ["Función de segundo grado", "Ecuaciones de segundo grado con una incógnita"]
+    }
+  ]
+}

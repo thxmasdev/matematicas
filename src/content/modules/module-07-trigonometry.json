@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "module-07-trigonometry",
+  "order": 7,
+  "unit": 7,
+  "slug": "trigonometria",
+  "title": "Trigonometría",
+  "description": "Teorema de Pitágoras, razones trigonométricas, medición de ángulos, ángulos notables y resolución de triángulos rectángulos.",
+  "topics": [
+    {
+      "id": "pitagoras",
+      "title": "Teorema de Pitágoras",
+      "subtopics": ["Teorema de Pitágoras"]
+    },
+    {
+      "id": "razones-trigonometricas",
+      "title": "Razones trigonométricas",
+      "subtopics": ["Razones trigonométricas", "Medición de ángulos", "Ángulos notables"]
+    },
+    {
+      "id": "triangulos-rectangulos",
+      "title": "Resolución de triángulos rectángulos",
+      "subtopics": ["Resolución de triángulos rectángulos", "Uso de la calculadora"]
+    }
+  ]
+}

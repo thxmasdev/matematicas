@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "moduleId": "module-03-number-sets",
+  "moduleSlug": "conjuntos-numericos",
+  "title": "Unidad 3: Conjuntos Numéricos",
+  "sections": [
+    {
+      "id": "ampliacion-numerica",
+      "topicId": "conjuntos-numericos",
+      "title": "Ampliación Sucesiva de los Conjuntos Numéricos",
+      "content": "Los conjuntos numéricos se amplían a lo largo de la historia para dar solución a operaciones no resolubles en sistemas numéricos previos:\n\n* **Números Naturales ($\\\\mathbb{N}$)**: $\\\\mathbb{N} = \\\\{1, 2, 3, 4, \\\\dots\\\\}$. Si se añade el cero, se denota $\\\\mathbb{N}_0 = \\\\{0, 1, 2, 3, \\\\dots\\\\}$. Son cerrados para la suma y el producto.\n* **Números Enteros ($\\\\mathbb{Z}$)**: $\\\\mathbb{Z} = \\\\{\\\\dots, -3, -2, -1, 0, 1, 2, 3, \\\\dots\\\\}$. Incorpora los enteros negativos, permitiendo resolver cualquier sustracción $a - b$.\n* **Números Racionales ($\\\\mathbb{Q}$)**: Números que pueden expresarse como cociente de dos enteros con denominador no nulo: $\\\\mathbb{Q} = \\\\left\\\\{ \\\\frac{a}{b} \\\\;\\\\middle|\\\\; a, b \\\\in \\\\mathbb{Z}, b \\\\neq 0 \\\\right\\\\}$. Incluye enteros, fracciones irreducibles, expresiones decimales exactas y periódicas (puras y mixtas).\n* **Números Irracionales ($\\\\mathbb{I}$)**: Números decimales con infinitas cifras decimales no periódicas que no pueden expresarse como fracción (ejemplos: $\\\\sqrt{2}$, $\\\\sqrt{3}$, $\\\\pi \\\\approx 3{,}14159\\\\dots$, el número $e$, el número áureo $\\\\phi$).\n* **Números Reales ($\\\\mathbb{R}$)**: Unión de racionales e irracionales: $\\\\mathbb{R} = \\\\mathbb{Q} \\\\cup \\\\mathbb{I}$. Existe una correspondencia biunívoca entre $\\\\mathbb{R}$ y los puntos de la recta numérica.",
+      "callouts": [
+        {
+          "type": "info",
+          "title": "Cadena de inclusiones",
+          "content": "Se cumple la cadena de subconjuntos estrictos: $\\\\mathbb{N} \\\\subset \\\\mathbb{Z} \\\\subset \\\\mathbb{Q} \\\\subset \\\\mathbb{R}$. Los irracionales $\\\\mathbb{I}$ son disjuntos de $\\\\mathbb{Q}$ ($\\\\mathbb{Q} \\\\cap \\\\mathbb{I} = \\\\emptyset$)."
+        }
+      ],
+      "examples": [
+        {
+          "title": "Clasificación de números",
+          "statement": "Clasificar los siguientes números en $\\\\mathbb{N}$, $\\\\mathbb{Z}$, $\\\\mathbb{Q}$, $\\\\mathbb{I}$, $\\\\mathbb{R}$:\n1. $-7$\n2. $\\\\frac{3}{4}$\n3. $\\\\sqrt{5}$\n4. $0{,}333\\\\dots$",
+          "solution": "1. $-7 \\\\in \\\\mathbb{Z}, \\\\mathbb{Q}, \\\\mathbb{R}$.\n2. $\\\\frac{3}{4} \\\\in \\\\mathbb{Q}, \\\\mathbb{R}$.\n3. $\\\\sqrt{5} \\\\in \\\\mathbb{I}, \\\\mathbb{R}$.\n4. $0{,}333\\\\dots = \\\\frac{1}{3} \\\\in \\\\mathbb{Q}, \\\\mathbb{R}$.",
+          "explanation": "Todo número periódico es racional."
+        }
+      ]
+    },
+    {
+      "id": "operaciones-reales",
+      "topicId": "operaciones-reales",
+      "title": "Operaciones con Números Reales y Jerarquía",
+      "content": "En $\\\\mathbb{R}$, las cuatro operaciones aritméticas fundamentales respetan axiomas de cuerpo:\n\n* **Propiedades conmutativa y asociativa** de la suma y la multiplicación.\n* **Propiedad distributiva**: $a(b + c) = ab + ac$.\n* **Elemento neutro**: $0$ para la adición y $1$ para el producto.\n* **Elementos simétricos**: Todo real $a$ tiene opuesto $-a$, y todo real no nulo $a \\\\neq 0$ tiene inverso multiplicativo $a^{-1} = \\\\frac{1}{a}$.\n\n### Potenciación con exponente entero y fraccionario\n* $a^0 = 1$ para $a \\\\neq 0$.\n* $a^{-n} = \\\\frac{1}{a^n} = \\\\left(\\\\frac{1}{a}\\\\right)^n$.\n* Exponente fraccionario: $a^{m/n} = \\\\sqrt[n]{a^m}$.\n\n### Jerarquía u orden de operaciones\n1. Operaciones delimitadas por signos de agrupación: paréntesis, corchetes o llaves.\n2. Potencias y raíces.\n3. Multiplicaciones y divisiones (de izquierda a derecha).\n4. Sumas y restas.",
+      "callouts": [
+        {
+          "type": "warning",
+          "title": "Cuidado con los signos de menos",
+          "content": "$-3^2 = -9$, mientras que $(-3)^2 = 9$. El exponente solo afecta a la base a la que está directamente aplicado a menos que haya paréntesis."
+        }
+      ],
+      "examples": [
+        {
+          "title": "Operación combinada con fracciones",
+          "statement": "Resolver $\\\\left(\\\\frac{1}{2} + \\\\frac{1}{3}\\\\right) \\\\div \\\\frac{5}{6}$.",
+          "solution": "1. Sumamos en el paréntesis: $\\\\frac{1}{2} + \\\\frac{1}{3} = \\\\frac{3+2}{6} = \\\\frac{5}{6}$.\n2. Dividimos: $\\\\frac{5}{6} \\\\div \\\\frac{5}{6} = 1$.",
+          "explanation": "El resultado final simplificado es 1."
+        }
+      ]
+    },
+    {
+      "id": "radicales-propiedades",
+      "topicId": "radicales",
+      "title": "Radicales y Racionalización de Denominadores",
+      "content": "Un **radical** es una expresión de la forma $\\\\sqrt[n]{a} = b \\\\iff b^n = a$.\n\n### Radicales semejantes\nDos o más radicales son semejantes si tienen el mismo índice y el mismo radicando. Solo los radicales semejantes pueden sumarse o restarse directamente sacando factor común:\n$$\na\\\\sqrt[n]{k} + b\\\\sqrt[n]{k} = (a + b)\\\\sqrt[n]{k}\n$$\n\n### Extracción de factores de un radical\nSi un factor del radicando tiene un exponente mayor o igual al índice de la raíz, puede extraerse dividiendo el exponente por el índice:\n$$\n\\\\sqrt{72} = \\\\sqrt{36 \\\\cdot 2} = 6\\\\sqrt{2}\n$$\n\n### Racionalización de denominadores\nConsiste en transformar una expresión con raíces en el denominador en otra equivalente sin ellas:\n* **Caso 1: Denominador monomio con raíz cuadrada**: Multiplicamos numerador y denominador por la misma raíz:\n  $$\n  \\\\frac{a}{\\\\sqrt{b}} = \\\\frac{a\\\\sqrt{b}}{\\\\sqrt{b} \\\\cdot \\\\sqrt{b}} = \\\\frac{a\\\\sqrt{b}}{b}\n  $$\n* **Caso 2: Denominador binomio**: Multiplicamos numerador y denominador por el binomio conjugado usando la diferencia de cuadrados $(x-y)(x+y) = x^2 - y^2$:\n  $$\n  \\\\frac{a}{\\\\sqrt{b} + \\\\sqrt{c}} = \\\\frac{a(\\\\sqrt{b} - \\\\sqrt{c})}{(\\\\sqrt{b} + \\\\sqrt{c})(\\\\sqrt{b} - \\\\sqrt{c})} = \\\\frac{a(\\\\sqrt{b} - \\\\sqrt{c})}{b - c}\n  $$",
+      "callouts": [
+        {
+          "type": "remember",
+          "title": "No distribuir la raíz",
+          "content": "$\\\\sqrt{a + b} \\\\neq \\\\sqrt{a} + \\\\sqrt{b}$. La radicación solo distribuye sobre la multiplicación y la división."
+        }
+      ],
+      "examples": [
+        {
+          "title": "Racionalización de monomio",
+          "statement": "Racionalizar y simplificar $\\\\frac{10}{\\\\sqrt{5}}$.",
+          "solution": "$\\\\frac{10}{\\\\sqrt{5}} \\\\cdot \\\\frac{\\\\sqrt{5}}{\\\\sqrt{5}} = \\\\frac{10\\\\sqrt{5}}{5} = 2\\\\sqrt{5}$.",
+          "explanation": "Al dividir 10 por 5 obtenemos el coeficiente 2."
+        }
+      ]
+    },
+    {
+      "id": "logaritmos-intervalos",
+      "topicId": "logaritmos-valor-absoluto-intervalos",
+      "title": "Logaritmos, Valor Absoluto e Intervalos Reales",
+      "content": "### Logaritmos\nEl logaritmo en base $b$ de un número real positivo $a$ es el exponente $c$ al que debe elevarse la base para obtener dicho número:\n$$\n\\\\log_b(a) = c \\\\iff b^c = a \\quad (b > 0, b \\\\neq 1, a > 0)\n$$\n\nPropiedades fundamentales:\n* $\\\\log_b(x \\\\cdot y) = \\\\log_b(x) + \\\\log_b(y)$\n* $\\\\log_b\\\\left(\\\\frac{x}{y}\\\\right) = \\\\log_b(x) - \\\\log_b(y)$\n* $\\\\log_b(x^k) = k \\\\cdot \\\\log_b(x)$\n* $\\\\log_b(1) = 0$ y $\\\\log_b(b) = 1$\n* Cambio de base: $\\\\log_b(a) = \\\\frac{\\\\log_c(a)}{\\\\log_c(b)}$\n\n### Valor absoluto\nEl valor absoluto de $x \\\\in \\\\mathbb{R}$, denotado $|x|$, es la distancia entre $x$ y el origen:\n$$\n|x| = \\\\begin{cases} x & \\\\text{si } x \\\\ge 0 \\\\ -x & \\\\text{si } x < 0 \\\\end{cases}\n$$\nPropiedades: $|x| \\\\ge 0$, $|-x| = |x|$, $|x \\\\cdot y| = |x| \\\\cdot |y|$, y desigualdad triangular $|x + y| \\\\le |x| + |y|$.\n\n### Intervalos en la recta real\nSubconjuntos continuos de $\\\\mathbb{R}$:\n* **Abierto**: $(a, b) = \\\\{x \\\\in \\\\mathbb{R} \\\\mid a < x < b\\\\}$\n* **Cerrado**: $[a, b] = \\\\{x \\\\in \\\\mathbb{R} \\\\mid a \\\\le x \\\\le b\\\\}$\n* **Semiabiertos**: $[a, b)$ y $(a, b]$\n* **Infinitos**: $(-\\\\infty, b]$, $[a, +\\\\infty)$, etc.",
+      "callouts": [
+        {
+          "type": "tip",
+          "title": "Corchetes vs Paréntesis",
+          "content": "Un corchete $[$ o $]$ indica que el extremo pertenece al conjunto (desigualdad amplia $\\\\le$ o $\\\\ge$). Un paréntesis $($ o $)$ indica que el extremo no pertenece (desigualdad estricta $<$ o $>$)."
+        }
+      ],
+      "examples": [
+        {
+          "title": "Intersección de intervalos",
+          "statement": "Calcular $[-2, 5) \\\\cap [1, 8]$.",
+          "solution": "1. El extremo izquierdo común es el mayor de los inicios: $\\\\max(-2, 1) = 1$ (cerrado en ambos).\n2. El extremo derecho común es el menor de los finales: $\\\\min(5, 8) = 5$ (abierto en el primero).\n3. Resultado: $[1, 5)$.",
+          "explanation": "El punto 1 pertenece a ambos intervalos, mientras que el punto 5 pertenece solo al segundo."
+        }
+      ]
+    },
+    {
+      "id": "regla-de-tres-porcentajes",
+      "topicId": "regla-de-tres",
+      "title": "Regla de Tres Simple y Porcentajes",
+      "content": "### Proporcionalidad directa e inversa\n* **Directamente proporcionales**: Dos magnitudes son directamente proporcionales cuando al multiplicar una de ellas por un número, la otra queda multiplicada por el mismo número. Su cociente permanece constante: $\\\\frac{y}{x} = k$.\n  $$\n  x = \\\\frac{b \\\\cdot c}{a}\n  $$\n* **Inversamente proporcionales**: Dos magnitudes son inversamente proporcionales cuando al multiplicar una de ellas por un número, la otra queda dividida por ese mismo número. Su producto permanece constante: $x \\\\cdot y = k$.\n  $$\n  x = \\\\frac{a \\\\cdot b}{c}\n  $$\n\n### Porcentajes\nEl porcentaje o tanto por ciento representa una razón con denominador 100:\n$$\nP\\\\% \\\\text{ de } C = \\\\frac{P \\\\cdot C}{100}\n$$\nPara aumentos porcentuales se multiplica por $(1 + P/100)$ y para descuentos por $(1 - P/100)$.",
+      "callouts": [
+        {
+          "type": "info",
+          "title": "Identificar el tipo de proporción",
+          "content": "Antes de operar, preguntarse: a mayor cantidad de la primera magnitud, ¿corresponde más o menos cantidad de la segunda? Si es más, es directa; si es menos, es inversa."
+        }
+      ],
+      "examples": [
+        {
+          "title": "Regla de tres inversa",
+          "statement": "Si 4 canillas llenan un depósito en 6 horas, ¿cuánto tardarán 3 canillas?",
+          "solution": "A menos canillas, más tiempo tardarán (proporcionalidad inversa):\n$$x = \\\\frac{4 \\\\cdot 6}{3} = \\\\frac{24}{3} = 8 \\\\text{ horas.}$$\n",
+          "explanation": "El producto $4 \\\\times 6 = 3 \\\\times 8 = 24$ permanece constante."
+        }
+      ]
+    }
+  ]
+}

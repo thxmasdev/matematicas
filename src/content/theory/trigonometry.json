@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "moduleId": "module-07-trigonometry",
+  "moduleSlug": "trigonometria",
+  "title": "Unidad 7: Trigonometría y Resolución de Triángulos Rectángulos",
+  "sections": [
+    {
+      "id": "teorema-de-pitagoras",
+      "topicId": "pitagoras",
+      "title": "Teorema de Pitágoras",
+      "content": "El **Teorema de Pitágoras** es una de las relaciones geométricas fundamentales de la matemática euclídea:\n\n> *En todo triángulo rectángulo, el cuadrado de la longitud de la hipotenusa es igual a la suma de los cuadrados de las longitudes de los catetos.*\n\n$$\nc^2 = a^2 + b^2\n$$\ndonde $c$ representa la hipotenusa (el lado opuesto al ángulo recto de $90^\\circ$ y de mayor longitud) y $a$, $b$ son los dos catetos.\n\n### Fórmulas de Despeje\n* Para calcular la **hipotenusa**: $c = \\\\sqrt{a^2 + b^2}$.\n* Para calcular un **cateto**: $a = \\\\sqrt{c^2 - b^2}$ o $b = \\\\sqrt{c^2 - a^2}$.\n\n### Ternas Pitagóricas\nConjuntos de tres números enteros positivos $(a, b, c)$ que satisfacen exactamente el teorema de Pitágoras. La terna más elemental es $(3, 4, 5)$, ya que $3^2 + 4^2 = 9 + 16 = 25 = 5^2$. Cualquier múltiplo entero de una terna pitagórica es también una terna pitagórica (por ejemplo, $(6, 8, 10)$ o $(9, 12, 15)$).",
+      "callouts": [
+        {
+          "type": "warning",
+          "title": "Condición de aplicación",
+          "content": "El Teorema de Pitágoras se aplica **únicamente a triángulos rectángulos**. Para triángulos oblicuángulos (acutángulos u obtusángulos) se debe recurrir al Teorema del Coseno."
+        }
+      ],
+      "examples": [
+        {
+          "title": "Cálculo de la hipotenusa",
+          "statement": "Los catetos de un triángulo rectángulo miden 5 cm y 12 cm. Calcular la hipotenusa.",
+          "solution": "$c = \\\\sqrt{5^2 + 12^2} = \\\\sqrt{25 + 144} = \\\\sqrt{169} = 13 \\\\text{ cm}$.",
+          "explanation": "La hipotenusa mide exactamente 13 cm."
+        }
+      ]
+    },
+    {
+      "id": "razones-trigonometricas-notables",
+      "topicId": "razones-trigonometricas",
+      "title": "Razones Trigonométricas y Ángulos Notables",
+      "content": "Dado un triángulo rectángulo y un ángulo agudo $\\\\alpha$, se definen las tres **razones trigonométricas directas**:\n\n* **Seno**: Razón entre el cateto opuesto y la hipotenusa:\n  $$\n  \\\\operatorname{sen}(\\\\alpha) = \\\\frac{\\\\text{cateto opuesto}}{\\\\text{hipotenusa}}\n  $$\n* **Coseno**: Razón entre el cateto adyacente y la hipotenusa:\n  $$\n  \\\\cos(\\\\alpha) = \\\\frac{\\\\text{cateto adyacente}}{\\\\text{hipotenusa}}\n  $$\n* **Tangente**: Razón entre el cateto opuesto y el cateto adyacente:\n  $$\n  \\\\tan(\\\\alpha) = \\\\frac{\\\\text{cateto opuesto}}{\\\\text{cateto adyacente}} = \\\\frac{\\\\operatorname{sen}(\\\\alpha)}{\\\\cos(\\\\alpha)}\n  $$\n\n### Identidad Trigonométrica Fundamental\nPara cualquier ángulo real $\\\\alpha$ se cumple:\n$$\n\\\\operatorname{sen}^2(\\\\alpha) + \\\\cos^2(\\\\alpha) = 1\n$$\n\n### Valores Exactos para Ángulos Notables\n| Ángulo | $0^\\circ$ | $30^\\circ$ | $45^\\circ$ | $60^\\circ$ | $90^\\circ$ |\n| :--- | :---: | :---: | :---: | :---: | :---: |\n| $\\\\operatorname{sen}(\\\\alpha)$ | $0$ | $\\\\frac{1}{2}$ | $\\\\frac{\\\\sqrt{2}}{2}$ | $\\\\frac{\\\\sqrt{3}}{2}$ | $1$ |\n| $\\\\cos(\\\\alpha)$ | $1$ | $\\\\frac{\\\\sqrt{3}}{2}$ | $\\\\frac{\\\\sqrt{2}}{2}$ | $\\\\frac{1}{2}$ | $0$ |\n| $\\\\tan(\\\\alpha)$ | $0$ | $\\\\frac{\\\\sqrt{3}}{3}$ | $1$ | $\\\\sqrt{3}$ | $\\\\nexists$ |",
+      "callouts": [
+        {
+          "type": "tip",
+          "title": "Relación entre ángulos complementarios",
+          "content": "Si dos ángulos agudos suman $90^\\circ$ ($\\\\alpha + \\\\beta = 90^\\circ$), entonces $\\\\operatorname{sen}(\\\\alpha) = \\\\cos(\\\\beta)$ y $\\\\tan(\\\\alpha) = \\\\frac{1}{\\\\tan(\\\\beta)}$."
+        }
+      ],
+      "examples": [
+        {
+          "title": "Uso de la identidad fundamental",
+          "statement": "Si $\\\\operatorname{sen}(\\\\alpha) = \\\\frac{3}{5}$ y $\\\\alpha$ es un ángulo agudo, hallar $\\\\cos(\\\\alpha)$.",
+          "solution": "$\\\\cos^2(\\\\alpha) = 1 - \\\\operatorname{sen}^2(\\\\alpha) = 1 - \\\\left(\\\\frac{3}{5}\\\\right)^2 = 1 - \\\\frac{9}{25} = \\\\frac{16}{25}$.\nComo $\\\\alpha$ es agudo, $\\\\cos(\\\\alpha) = \\\\sqrt{\\\\frac{16}{25}} = \\\\frac{4}{5}$.",
+          "explanation": "El coseno es positivo en el primer cuadrante."
+        }
+      ]
+    },
+    {
+      "id": "resolucion-triangulos-rectangulos",
+      "topicId": "triangulos-rectangulos",
+      "title": "Resolución de Triángulos Rectángulos",
+      "content": "**Resolver un triángulo rectángulo** consiste en calcular las longitudes de sus tres lados y las amplitudes de sus tres ángulos a partir de datos conocidos (al menos dos elementos, donde uno de ellos debe ser obligatoriamente un lado).\n\n### Casos Típicos de Resolución\n1. **Conocidos la hipotenusa $c$ y un ángulo agudo $\\\\alpha$**:\n   * El otro ángulo agudo: $\\\\beta = 90^\\circ - \\\\alpha$.\n   * Los catetos: $a = c \\\\cdot \\\\operatorname{sen}(\\\\alpha)$ y $b = c \\\\cdot \\\\cos(\\\\alpha)$.\n2. **Conocidos un cateto $a$ y un ángulo agudo $\\\\alpha$**:\n   * El otro ángulo agudo: $\\\\beta = 90^\\circ - \\\\alpha$.\n   * La hipotenusa: $c = \\\\frac{a}{\\\\operatorname{sen}(\\\\alpha)}$.\n   * El otro cateto: $b = \\\\frac{a}{\\\\tan(\\\\alpha)}$.\n3. **Conocidos dos lados** (por ejemplo, cateto $a$ e hipotenusa $c$):\n   * El cateto faltante por Pitágoras: $b = \\\\sqrt{c^2 - a^2}$.\n   * El ángulo agudo: $\\\\operatorname{sen}(\\\\alpha) = \\\\frac{a}{c} \\\\implies \\\\alpha = \\\\arcsin\\\\left(\\\\frac{a}{c}\\\\right)$.\n\n### Ángulos de Elevación y de Depresión\n* **Ángulo de elevación**: Formado entre la línea visual horizontal y la línea dirigida hacia un objeto situado arriba del observador.\n* **Ángulo de depresión**: Formado entre la línea horizontal y la línea dirigida hacia un objeto situado debajo del observador.",
+      "callouts": [
+        {
+          "type": "info",
+          "title": "Configuración de la calculadora",
+          "content": "Al usar la calculadora científica para razones trigonométricas en grados sexagesimales, asegurate de que esté configurada en modo DEG (Degrees), no en RAD (Radianes) ni GRA (Gradianes)."
+        }
+      ],
+      "examples": [
+        {
+          "title": "Problema de la torre (ángulo de elevación)",
+          "statement": "Desde un punto en el suelo situado a 20 m de la base de una torre, se observa su cúspide con un ángulo de elevación de $30^\\circ$. Calcular la altura de la torre.",
+          "solution": "Planteamos la tangente del ángulo:\n$\\tan(30^\\circ) = \\\\frac{h}{20} \\\\implies h = 20 \\\\cdot \\\\tan(30^\\circ) = 20 \\\\cdot \\\\frac{\\\\sqrt{3}}{3} \\\\approx 11{,}55 \\\\text{ m}$.",
+          "explanation": "La altura de la torre es aproximadamente 11,55 metros."
+        }
+      ]
+    }
+  ]
+}

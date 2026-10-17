@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "moduleId": "module-01-logic",
+  "moduleSlug": "logica",
+  "title": "Unidad 1: Lógica Proposicional",
+  "sections": [
+    {
+      "id": "concepto-proposicion",
+      "topicId": "proposiciones",
+      "title": "Concepto de Proposición y Variables Proposicionales",
+      "content": "Para la lógica, se llama **proposición** a toda **oración declarativa** (en contraste con las interrogativas, exclamativas o imperativas) respecto de la cual tiene sentido decidir si es **Verdadera (V)** o **Falsa (F)**.\n\nUna proposición afirma o niega algo de manera objetiva, sin ambigüedades. El valor de verdad de una proposición cualquiera $p$ se denota con **V** o **F**.\n\nLas proposiciones se representan mediante letras minúsculas: $p, q, r, s, \\dots$, denominadas **variables proposicionales**.",
+      "callouts": [
+        {
+          "type": "remember",
+          "title": "Para pensar",
+          "content": "Toda proposición es una oración, pero no toda oración es una proposición. Las preguntas, órdenes, deseos o expresiones con variables indeterminadas (como $x + y > 5$) no tienen un valor de verdad definido."
+        }
+      ],
+      "examples": [
+        {
+          "title": "Proposiciones con valor de verdad definido",
+          "statement": "Determinar si son proposiciones e indicar su valor de verdad:\n1. «3 es un número entero»\n2. «1,5 es un número natural»\n3. «−1 + 4,5 = 3,5»",
+          "solution": "1. Es proposición y es Verdadera (V).\n2. Es proposición y es Falsa (F), pues 1,5 es decimal/racional no entero.\n3. Es proposición y es Verdadera (V), pues la igualdad aritmética se verifica.",
+          "explanation": "Todas son oraciones declarativas con sentido unívoco de verdad o falsedad."
+        },
+        {
+          "title": "Expresiones que no son proposiciones",
+          "statement": "¿Son proposiciones las siguientes expresiones?\n1. «x + 3 = 5»\n2. «¿Te vas?»\n3. «Por favor, estudien.»\n4. «¡Qué suerte!»",
+          "solution": "Ninguna es una proposición.\n1. Es un enunciado abierto: hasta que no se asigne un valor concreto a $x$, no puede afirmarse si es V o F.\n2. Es una pregunta (interrogativa).\n3. Es una orden o pedido (imperativa).\n4. Es una exclamación.",
+          "explanation": "No tiene sentido asignarles un valor de verdad V o F."
+        }
+      ]
+    },
+    {
+      "id": "proposiciones-simples-y-compuestas",
+      "topicId": "proposiciones",
+      "title": "Proposiciones Simples y Compuestas",
+      "content": "Las proposiciones se dividen en dos grupos fundamentales:\n\n1. **Proposiciones Simples o Atómicas**: son aquellas que no contienen dentro de sí ninguna otra proposición (no poseen conectivos lógicos ni términos de enlace).\n   * Ejemplo: $p$: «El número cinco es primo».\n\n2. **Proposiciones Compuestas o Moleculares**: son aquellas que contienen dentro de sí una o más proposiciones simples, unidas mediante conectivos lógicos o términos de enlace.\n   * Ejemplo: «Hoy llueve y hace frío» (contiene a $p$: «Hoy llueve», $q$: «Hace frío» unidas por «y»).",
+      "callouts": [
+        {
+          "type": "info",
+          "title": "Términos de enlace",
+          "content": "El conectivo «no» es monádico (afecta a una sola proposición). Los demás («y», «o», «si... entonces», «si y sólo si») son diádicos o binarios, pues enlazan dos proposiciones."
+        }
+      ]
+    },
+    {
+      "id": "operaciones-logicas",
+      "topicId": "operadores-logicos",
+      "title": "Operaciones Lógicas y Tablas de Verdad",
+      "content": "A cada conectivo lógico le corresponde una operación lógica con su respectiva **tabla de verdad**:\n\n### 1. Negación ($\\sim p$ o $\\neg p$)\nInvierte el valor de verdad. Es falsa cuando $p$ es verdadera, y verdadera cuando $p$ es falsa.\n\n$$\\begin{array}{|c|c|}\\hline p & \\sim p \\\\\\hline \\mathrm{V} & \\mathrm{F} \\\\\\hline \\mathrm{F} & \\mathrm{V} \\\\\\hline\\end{array}$$\n\n### 2. Conjunción ($p \\land q$)\nSe lee «$p$ y $q$». Es verdadera **únicamente cuando ambas proposiciones son verdaderas** simultáneamente. En cualquier otro caso es falsa.\n\n$$\\begin{array}{|c|c|c|}\\hline p & q & p \\land q \\\\\\hline \\mathrm{V} & \\mathrm{V} & \\mathrm{V} \\\\\\hline \\mathrm{V} & \\mathrm{F} & \\mathrm{F} \\\\\\hline \\mathrm{F} & \\mathrm{V} & \\mathrm{F} \\\\\\hline \\mathrm{F} & \\mathrm{F} & \\mathrm{F} \\\\\\hline\\end{array}$$\n\n### 3. Disyunción inclusiva ($p \\lor q$)\nSe lee «$p$ o $q$». Es falsa **únicamente cuando ambas proposiciones son falsas**. Basta que al menos una sea verdadera para que la disyunción sea verdadera.\n\n$$\\begin{array}{|c|c|c|}\\hline p & q & p \\lor q \\\\\\hline \\mathrm{V} & \\mathrm{V} & \\mathrm{V} \\\\\\hline \\mathrm{V} & \\mathrm{F} & \\mathrm{V} \\\\\\hline \\mathrm{F} & \\mathrm{V} & \\mathrm{V} \\\\\\hline \\mathrm{F} & \\mathrm{F} & \\mathrm{F} \\\\\\hline\\end{array}$$\n\n### 4. Condicional o Implicación ($p \\Rightarrow q$)\nSe lee «Si $p$, entonces $q$». La proposición $p$ es el **antecedente** y $q$ es el **consecuente**.\nEs falsa **únicamente cuando el antecedente es verdadero y el consecuente es falso** ($V \\Rightarrow F$). En los demás casos es verdadera.\n\n$$\\begin{array}{|c|c|c|}\\hline p & q & p \\Rightarrow q \\\\\\hline \\mathrm{V} & \\mathrm{V} & \\mathrm{V} \\\\\\hline \\mathrm{V} & \\mathrm{F} & \\mathrm{F} \\\\\\hline \\mathrm{F} & \\mathrm{V} & \\mathrm{V} \\\\\\hline \\mathrm{F} & \\mathrm{F} & \\mathrm{V} \\\\\\hline\\end{array}$$\n\nOtras formas coloquiales del condicional: «$p$ sólo si $q$», «$q$, si $p$», «Cuando $p$, $q$».\n\n### 5. Bicondicional o Doble Implicación ($p \\Leftrightarrow q$)\nSe lee «$p$ si y sólo si $q$». Es verdadera **cuando ambas proposiciones tienen el mismo valor de verdad** (ambas verdaderas o ambas falsas).\n\n$$\\begin{array}{|c|c|c|}\\hline p & q & p \\Leftrightarrow q \\\\\\hline \\mathrm{V} & \\mathrm{V} & \\mathrm{V} \\\\\\hline \\mathrm{V} & \\mathrm{F} & \\mathrm{F} \\\\\\hline \\mathrm{F} & \\mathrm{V} & \\mathrm{F} \\\\\\hline \\mathrm{F} & \\mathrm{F} & \\mathrm{V} \\\\\\hline\\end{array}$$",
+      "examples": [
+        {
+          "title": "Simbolización de proposiciones compuestas",
+          "statement": "Expresar en lenguaje simbólico:\n«Si el lunes tengo parcial, entonces debo estudiar el fin de semana y descansar bien la noche previa a la evaluación».",
+          "solution": "1. Identificamos proposiciones simples:\n   * $p$: «El lunes tengo parcial»\n   * $q$: «Debo estudiar el fin de semana»\n   * $r$: «Debo descansar bien la noche previa a la evaluación»\n2. Conectivos:\n   * «Si... entonces...» $\\Rightarrow$ Condicional\n   * «y» $\\Rightarrow$ Conjunción\n3. Forma simbólica: $p \\Rightarrow (q \\land r)$",
+          "explanation": "El antecedente es $p$ y el consecuente es la conjunción $q \\land r$."
+        }
+      ]
+    },
+    {
+      "id": "reglas-de-prioridad",
+      "topicId": "prioridad-y-evaluacion",
+      "title": "Reglas de Prioridad y Uso de Paréntesis",
+      "content": "Al igual que en aritmética existe un orden de operaciones, en lógica proposicional los conectivos tienen una jerarquía estricta:\n\n* **Nivel 1 (más fuerte en ligadura):** $\\sim$ (Negación)\n* **Nivel 2:** $\\land, \\lor$ (Conjunción y Disyunción, mismo nivel)\n* **Nivel 3:** $\\Rightarrow$ (Condicional)\n* **Nivel 4 (más débil, se resuelve último):** $\\Leftrightarrow$ (Bicondicional)\n\n### Regla fundamental de desambiguación\nComo la conjunción ($\\land$) y la disyunción ($\\lor$) comparten el mismo nivel de prioridad, **mezclarlas sin paréntesis es ambiguo**. Por ejemplo, una expresión como $p \\land q \\lor r$ debe escribirse obligatoriamente como $(p \\land q) \\lor r$ o como $p \\land (q \\lor r)$ según corresponda.\n\n### Uso de paréntesis\nLos paréntesis permiten alterar el orden natural de resolución o indicar explícitamente cuál es la **operación lógica principal** (la que queda afuera de todos los paréntesis y se resuelve al final).",
+      "callouts": [
+        {
+          "type": "tip",
+          "title": "Operación principal",
+          "content": "En una expresión lógica, la operación principal es la última en evaluarse. Si no hay paréntesis, se rige por la jerarquía (el bicondicional es más débil que el condicional, y este más débil que conjunciones/disyunciones)."
+        }
+      ],
+      "examples": [
+        {
+          "title": "Colocación de paréntesis para fijar la operación principal",
+          "statement": "Dada la expresión $\\sim p \\Rightarrow q \\land \\sim r \\lor q \\Leftrightarrow s$, colocar paréntesis para que la operación principal sea:\n1. Una negación\n2. Un condicional\n3. Una disyunción",
+          "solution": "1. Negación: $\\sim(p \\Rightarrow q \\land \\sim r \\lor q \\Leftrightarrow s)$\n2. Condicional: $\\sim p \\Rightarrow (q \\land \\sim r \\lor q \\Leftrightarrow s)$\n3. Disyunción: $(\\sim p \\Rightarrow q \\land \\sim r) \\lor (q \\Leftrightarrow s)$",
+          "explanation": "Encerrar entre paréntesis las subexpresiones deja libre al operador que queremos que actúe como principal."
+        },
+        {
+          "title": "Evaluación con valores de verdad dados",
+          "statement": "Si $m = \\mathrm{F}$, $t = \\mathrm{V}$ y $s = \\mathrm{V}$, hallar el valor de verdad de:\n$$(s \\Leftrightarrow m) \\lor \\sim(t \\Rightarrow m)$$",
+          "solution": "1. Evaluamos $s \\Leftrightarrow m$: $\\mathrm{V} \\Leftrightarrow \\mathrm{F}$ resulta **F**.\n2. Evaluamos $t \\Rightarrow m$: $\\mathrm{V} \\Rightarrow \\mathrm{F}$ resulta **F**.\n3. Negamos el resultado: $\\sim(\\mathrm{F})$ resulta **V**.\n4. Resolvemos la disyunción principal: $\\mathrm{F} \\lor \\mathrm{V}$ resulta **V**.",
+          "explanation": "El valor final de la proposición compuesta es Verdadero (V)."
+        }
+      ]
+    }
+  ]
+}

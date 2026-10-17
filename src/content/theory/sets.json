@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "moduleId": "module-02-sets",
+  "moduleSlug": "conjuntos",
+  "title": "Unidad 2: Elementos de la Teoría de Conjuntos",
+  "sections": [
+    {
+      "id": "nocion-y-representacion",
+      "topicId": "nocion-y-representacion",
+      "title": "Noción de Conjunto, Pertenencia y Representación",
+      "content": "La **teoría de conjuntos** es fundamental para el estudio de las ciencias exactas. En matemática, las nociones de **conjunto** y **elemento** se aceptan como conceptos intuitivos: un conjunto es una colección bien definida de objetos llamados elementos.\n\nPara representar conjuntos se emplean letras mayúsculas ($A, B, C, \\\\dots$) y para sus elementos letras minúsculas ($a, b, c, \\\\dots$) o números.\n\n### Pertenencia ($\\\\in$ y $\\\\notin$)\nLa relación de **pertenencia** se evalúa **estrictamente entre un elemento y un conjunto**:\n* Decimos que $a$ pertenece a $A$ y escribimos: $a \\\\in A$.\n* Si $b$ no está en $A$, escribimos: $b \\\\notin A$.\n\nEn un conjunto todos los elementos deben ser distintos y el orden en que se listen no tiene relevancia.\n\n### Formas de definir un conjunto\n1. **Por extensión**: se listan todos sus elementos entre llaves, separados por comas.\n   $$\n   A = \\\\{1, 2, 3, 4, 5\\\\}\n   $$\n2. **Por comprensión**: se enuncia la propiedad o condición común que deben cumplir sus elementos, usando la barra «/» que se lee «tal que»:\n   $$\n   A = \\\\{x \\\\in \\\\mathbb{N} \\\\mid x < 6\\\\}\n   $$\n\n### Diagramas de Venn y Cardinal\n* **Diagrama de Venn**: representación gráfica donde cada conjunto se dibuja como una curva cerrada y los elementos como puntos en su interior.\n* **Cardinal de un conjunto finito**: denotado $\\\\mathrm{card}(A)$ o #A, es el número de elementos distintos que posee. Si $A = \\\\emptyset$, $\\\\mathrm{card}(A) = 0$.",
+      "callouts": [
+        {
+          "type": "info",
+          "title": "Conjuntos como elementos",
+          "content": "Los elementos de un conjunto son arbitrarios. Puede suceder que dentro de un conjunto haya otros conjuntos actuando como elementos: en $P = \\\\{\\\\{1\\\\}, \\\\{1, 2\\\\}\\\\}$, los conjuntos $\\\\{1\\\\}$ y $\\\\{1, 2\\\\}$ son elementos que pertenecen a $P$."
+        }
+      ],
+      "examples": [
+        {
+          "title": "Extensión y comprensión",
+          "statement": "Definir por extensión el conjunto $B = \\\\{x \\\\in \\\\mathbb{N} \\\\mid x \\\\text{ es par } \\\\land x < 10\\\\}$ e indicar su cardinal.",
+          "solution": "1. Los números naturales menores que 10 son 1, 2, 3, 4, 5, 6, 7, 8, 9.\n2. Filtramos los pares: 2, 4, 6, 8.\n3. Por extensión: $B = \\\\{2, 4, 6, 8\\\\}$.\n4. Cardinal: $\\\\mathrm{card}(B) = 4$.",
+          "explanation": "El conjunto contiene exactamente 4 elementos distintos."
+        }
+      ]
+    },
+    {
+      "id": "conjuntos-especiales-inclusion",
+      "topicId": "conjuntos-especiales",
+      "title": "Conjuntos Especiales, Inclusión e Igualdad",
+      "content": "### Conjuntos especiales\n* **Conjunto Universal ($U$)**: conjunto de referencia que contiene a todos los elementos del discurso.\n* **Conjunto Vacío ($\\\\emptyset$)**: conjunto que no contiene ningún elemento. Su cardinal es 0. **No lleva llaves**: $\\\\{\\\\emptyset\\\\}$ no es el conjunto vacío, sino un conjunto unitario cuyo elemento es $\\\\emptyset$.\n* **Conjunto Unitario**: conjunto con un único elemento (ejemplo: $\\\\{5\\\\}$).\n\n### Inclusión de conjuntos ($\\\\subset$ y $\\\\subseteq$)\nLa relación de **inclusión** compara **dos conjuntos** (nunca un elemento con un conjunto). Decimos que $A$ está incluido en $B$ (o $A$ es subconjunto de $B$) si todo elemento de $A$ pertenece también a $B$:\n$$\nA \\\\subset B \\\\iff \\\\forall x : x \\\\in A \\\\Rightarrow x \\\\in B\n$$\n\nPropiedades clave:\n1. **Todo conjunto está incluido en sí mismo**: $A \\\\subset A$.\n2. **El conjunto vacío está incluido en cualquier conjunto**: $\\\\emptyset \\\\subset A$ para todo $A$.\n\n### Igualdad de conjuntos\nDos conjuntos $A$ y $B$ son iguales si y sólo si tienen exactamente los mismos elementos:\n$$\nA = B \\\\iff A \\\\subset B \\\\land B \\\\subset A\n$$",
+      "callouts": [
+        {
+          "type": "remember",
+          "title": "Diferencia fundamental: $\\\\in$ vs $\\\\subset$",
+          "content": "$\\\\in$ (pertenencia) vincula un elemento con un conjunto ($2 \\\\in \\\\{2, 3\\\\}$). $\\\\subset$ (inclusión) vincula dos conjuntos ($\\\\{2\\\\} \\\\subset \\\\{2, 3\\\\}$). Es incorrecto escribir $2 \\\\subset \\\\{2, 3\\\\}$ o $\\\\{2\\\\} \\\\in \\\\{2, 3\\\\}$."
+        }
+      ],
+      "examples": [
+        {
+          "title": "Pertenencia e Inclusión",
+          "statement": "Dado $A = \\\\{\\\\{1\\\\}, \\\\{2\\\\}, \\\\{4\\\\}\\\\}$, determinar si es V o F:\n1. $2 \\\\in A$\n2. $\\\\{2\\\\} \\\\in A$\n3. $\\\\{2\\\\} \\\\subset A$\n4. $\\\\{\\\\{2\\\\}\\\\} \\\\subset A$",
+          "solution": "1. Falso: el número 2 no es elemento, el elemento es el conjunto $\\\\{2\\\\}$.\n2. Verdadero: $\\\\{2\\\\}$ figura directamente como elemento de $A$.\n3. Falso: para que $\\\\{2\\\\}$ esté incluido en $A$, el elemento 2 debería pertenecer a $A$, lo cual no ocurre.\n4. Verdadero: el conjunto cuyo único elemento es $\\\\{2\\\\}$ es un subconjunto de $A$.",
+          "explanation": "Hay que distinguir cuidadosamente el nivel de anidamiento de llaves."
+        }
+      ]
+    },
+    {
+      "id": "operaciones-con-conjuntos",
+      "topicId": "operaciones-conjuntos",
+      "title": "Operaciones con Conjuntos: Unión, Intersección, Diferencia y Complemento",
+      "content": "Las operaciones fundamentales entre conjuntos son:\n\n### 1. Unión ($A \\\\cup B$)\nConjunto formado por todos los elementos que pertenecen a $A$, a $B$, o a ambos (disyunción lógica):\n$$\nA \\\\cup B = \\\\{x \\\\mid x \\\\in A \\\\lor x \\\\in B\\\\}\n$$\n\n### 2. Intersección ($A \\\\cap B$)\nConjunto formado por los elementos comunes que pertenecen simultáneamente a $A$ y a $B$ (conjunción lógica):\n$$\nA \\\\cap B = \\\\{x \\\\mid x \\\\in A \\\\land x \\\\in B\\\\}\n$$\nSi $A \\\\cap B = \\\\emptyset$, se dice que $A$ y $B$ son **disjuntos**.\n\n### 3. Diferencia o Resta ($A - B$)\nElementos que pertenecen a $A$ pero **no pertenecen** a $B$:\n$$\nA - B = A \\\\cap B^c = \\\\{x \\\\mid x \\\\in A \\\\land x \\\\notin B\\\\}\n$$\nEn general, $A - B \\\\neq B - A$.\n\n### 4. Complemento ($A^c$)\nElementos del conjunto universal $U$ que no pertenecen a $A$:\n$$\nA^c = \\\\{x \\\\in U \\\\mid x \\\\notin A\\\\} = U - A\n$$\n\n### Principio de Inclusión-Exclusión\nPara dos conjuntos finitos $A$ y $B$:\n$$\n\\\\mathrm{card}(A \\\\cup B) = \\\\mathrm{card}(A) + \\\\mathrm{card}(B) - \\\\mathrm{card}(A \\\\cap B)\n$$",
+      "examples": [
+        {
+          "title": "Cálculo de operaciones con tres conjuntos",
+          "statement": "Dados $U = \\\\{1, 2, 3, 4, 5, 6, 7, 8, 9\\\\}$, $A = \\\\{1, 3, 5, 7, 9\\\\}$, $B = \\\\{2, 4, 6, 8\\\\}$ y $C = \\\\{1, 4, 9\\\\}$, calcular:\n1. $A \\\\cup C$\n2. $B \\\\cap C$\n3. $A \\\\cap B$\n4. $A - C$\n5. $A^c$",
+          "solution": "1. $A \\\\cup C = \\\\{1, 3, 4, 5, 7, 9\\\\}$\n2. $B \\\\cap C = \\\\{4\\\\}$\n3. $A \\\\cap B = \\\\emptyset$ (son disjuntos)\n4. $A - C = \\\\{3, 5, 7\\\\}$ (quitamos 1 y 9 de $A$)\n5. $A^c = \\\\{2, 4, 6, 8\\\\}$",
+          "explanation": "Se aplican directamente las definiciones de cada operación."
+        }
+      ]
+    }
+  ]
+}

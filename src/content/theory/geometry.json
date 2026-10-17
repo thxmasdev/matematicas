@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "moduleId": "module-06-geometry",
+  "moduleSlug": "geometria",
+  "title": "Unidad 6: Elementos de Geometría Plana y del Espacio",
+  "sections": [
+    {
+      "id": "elementos-fundamentales-angulos",
+      "topicId": "elementos-y-angulos",
+      "title": "Elementos Fundamentales y Ángulos",
+      "content": "### Conceptos Primitivos de la Geometría\n* **Punto**: Objeto adimensional sin longitud, anchura ni altura.\n* **Recta**: Conjunto infinito y continuo de puntos alineados en una sola dimensión espacial.\n* **Plano**: Superficie bidimensional infinita e ilimitada determinada por tres puntos no alineados.\n\n### Ángulos y Sistemas de Medición\nUn ángulo es la región del plano comprendida entre dos semirrectas que comparten un origen común llamado vértice.\n\n* **Clasificación por su amplitud**:\n  - Nulo: $0^\\circ$.\n  - Agudo: Mayor que $0^\\circ$ y menor que $90^\\circ$.\n  - Recto: Exactamente $90^\\circ$.\n  - Obtuso: Mayor que $90^\\circ$ y menor que $180^\\circ$.\n  - Llano: Exactamente $180^\\circ$.\n  - Completo o de un giro: $360^\\circ$.\n\n* **Relaciones entre pares de ángulos**:\n  - **Complementarios**: Suman $90^\\circ$ (un ángulo recto).\n  - **Suplementarios**: Suman $180^\\circ$ (un ángulo llano).\n  - **Adyacentes**: Tienen un lado común y los otros dos son semirrectas opuestas (son consecutivos y suplementarios).\n  - **Opuestos por el vértice**: Tienen el mismo vértice y sus lados son semirrectas opuestas; son congruentes (igual medida).\n\n* **Sistemas de medición**:\n  - *Sexagesimal*: La circunferencia se divide en $360^\\circ$ ($1^\\circ = 60'$, $1' = 60''$).\n  - *Radial o circular*: Unidad radián (rad). Se cumple la equivalencia fundamental: $\\\\pi \\\\text{ rad} = 180^\\circ$.",
+      "callouts": [
+        {
+          "type": "tip",
+          "title": "Conversión de grados a radianes",
+          "content": "Para pasar de grados sexagesimales a radianes se multiplica por $\\\\frac{\\\\pi}{180^\\circ}$. Por ejemplo: $60^\\circ \\\\cdot \\\\frac{\\\\pi}{180^\\circ} = \\\\frac{\\\\pi}{3} \\\\text{ rad}$."
+        }
+      ],
+      "examples": [
+        {
+          "title": "Ángulo suplementario",
+          "statement": "Hallar el suplemento de un ángulo de $68^\\circ 30'$.",
+          "solution": "Restamos de $180^\\circ = 179^\\circ 60'$:\n$179^\\circ 60' - 68^\\circ 30' = 111^\\circ 30'$.",
+          "explanation": "La suma de ambos ángulos es exactamente $180^\\circ$."
+        }
+      ]
+    },
+    {
+      "id": "figuras-planas-areas",
+      "topicId": "figuras-planas",
+      "title": "Figuras Planas, Perímetro y Área",
+      "content": "### Triángulos\nPolígonos de tres lados. Propiedades fundamentales:\n* **Suma de ángulos interiores**: $\\\\alpha + \\\\beta + \\\\gamma = 180^\\circ$.\n* **Desigualdad triangular**: En todo triángulo, cada lado es menor que la suma de los otros dos y mayor que su diferencia.\n* **Área**: $A = \\\\frac{b \\\\cdot h}{2}$.\n\n### Cuadriláteros y Fórmulas de Área\n* **Rectángulo**: $P = 2b + 2h$, $A = b \\\\cdot h$.\n* **Cuadrado**: $P = 4l$, $A = l^2$.\n* **Paralelogramo**: $A = b \\\\cdot h$.\n* **Rombo**: $A = \\\\frac{D \\\\cdot d}{2}$ ($D$ diagonal mayor, $d$ diagonal menor).\n* **Trapecio**: $A = \\\\frac{(B + b) \\\\cdot h}{2}$ ($B$ base mayor, $b$ base menor).\n\n### Polígonos Regulares\nPolígonos con todos sus lados y ángulos congruentes:\n* Suma de ángulos interiores: $S_i = (n - 2) \\\\cdot 180^\\circ$.\n* Cada ángulo interior de un polígono regular de $n$ lados: $\\\\alpha_i = \\\\frac{(n - 2) \\\\cdot 180^\\circ}{n}$.\n* Área: $A = \\\\frac{P \\\\cdot a_p}{2}$ ($P$ perímetro, $a_p$ apotema).\n\n### Circunferencia y Círculo\n* Longitud de la circunferencia: $L = 2\\\\pi r = \\\\pi d$.\n* Área del círculo: $A = \\\\pi r^2$.",
+      "callouts": [
+        {
+          "type": "remember",
+          "title": "Perímetro vs Área",
+          "content": "El perímetro es una magnitud lineal (medida en cm, m), mientras que el área mide superficie (en $\\\\text{cm}^2, \\\\text{m}^2$)."
+        }
+      ],
+      "examples": [
+        {
+          "title": "Área de un trapecio",
+          "statement": "Calcular el área de un trapecio de base mayor 12 cm, base menor 8 cm y altura 5 cm.",
+          "solution": "$A = \\\\frac{(12 + 8) \\\\cdot 5}{2} = \\\\frac{20 \\\\cdot 5}{2} = \\\\frac{100}{2} = 50 \\\\text{ cm}^2$.",
+          "explanation": "Aplicación directa de la fórmula del área del trapecio."
+        }
+      ]
+    },
+    {
+      "id": "cuerpos-geometricos-volumen",
+      "topicId": "cuerpos-geometricos",
+      "title": "Cuerpos Geométricos y Volúmenes",
+      "content": "Un cuerpo geométrico o sólido ocupa un lugar tridimensional en el espacio.\n\n### Poliedros\nCuerpos delimitados exclusivamente por caras poligonales planas:\n* **Teorema de Euler**: En todo poliedro convexo se cumple $C + V = A + 2$ ($C$ caras, $V$ vértices, $A$ aristas).\n* **Cubo (hexaedro regular)**:\n  $$\n  A_{\\\\text{total}} = 6a^2, \\quad V = a^3\n  $$\n* **Prisma recto rectangular (paralelepípedo)**:\n  $$\n  A_{\\\\text{total}} = 2(ab + bc + ac), \\quad V = a \\\\cdot b \\\\cdot c\n  $$\n\n### Cuerpos Redondos\nCuerpos delimitados por superficies curvas o curvas y planas:\n* **Cilindro recto**:\n  $$\n  A_{\\\\text{lateral}} = 2\\\\pi r h, \\quad A_{\\\\text{total}} = 2\\\\pi r(h + r), \\quad V = \\\\pi r^2 h\n  $$\n* **Cono recto**:\n  $$\n  V = \\\\frac{1}{3}\\\\pi r^2 h\n  $$\n* **Esfera**:\n  $$\n  A = 4\\\\pi r^2, \\quad V = \\\\frac{4}{3}\\\\pi r^3\n  $$",
+      "callouts": [
+        {
+          "type": "info",
+          "title": "Unidades de volumen",
+          "content": "El volumen se expresa en unidades cúbicas ($\\\\text{cm}^3, \\\\text{m}^3$). Recordá la equivalencia fundamental: $1 \\\\text{ dm}^3 = 1 \\\\text{ litro}$."
+        }
+      ],
+      "examples": [
+        {
+          "title": "Volumen de un prisma",
+          "statement": "Calcular el volumen de un depósito rectangular de 4 m de largo, 2 m de ancho y 1,5 m de alto.",
+          "solution": "$V = a \\\\cdot b \\\\cdot h = 4 \\\\cdot 2 \\\\cdot 1{,}5 = 12 \\\\text{ m}^3$.",
+          "explanation": "Capacidad total de 12.000 litros de agua."
+        }
+      ]
+    }
+  ]
+}

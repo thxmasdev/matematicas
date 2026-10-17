@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "module-05-algebra",
+  "order": 5,
+  "unit": 5,
+  "slug": "expresiones-algebraicas",
+  "title": "Expresiones Algebraicas",
+  "description": "Polinomios, operaciones, regla de Ruffini, teorema del resto, factorización y expresiones algebraicas fraccionarias.",
+  "topics": [
+    {
+      "id": "polinomios",
+      "title": "Polinomios y operaciones",
+      "subtopics": ["Polinomios", "Suma y resta", "Multiplicación", "División"]
+    },
+    {
+      "id": "ruffini-y-resto",
+      "title": "Regla de Ruffini y teorema del resto",
+      "subtopics": ["Regla de Ruffini", "Teorema del resto"]
+    },
+    {
+      "id": "factorizacion",
+      "title": "Factorización de polinomios",
+      "subtopics": ["Factorización de polinomios"]
+    },
+    {
+      "id": "expresiones-fraccionarias",
+      "title": "Expresiones algebraicas fraccionarias",
+      "subtopics": ["Expresiones algebraicas fraccionarias"]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "module-01-logic",
+  "order": 1,
+  "unit": 1,
+  "slug": "logica",
+  "title": "Lógica",
+  "description": "Variables proposicionales, proposiciones simples y compuestas, operadores lógicos y tablas de verdad.",
+  "topics": [
+    {
+      "id": "proposiciones",
+      "title": "Proposiciones y variables proposicionales",
+      "subtopics": ["Concepto de proposición", "Variables proposicionales", "Proposiciones simples y compuestas"]
+    },
+    {
+      "id": "operadores-logicos",
+      "title": "Operaciones lógicas",
+      "subtopics": ["Negación", "Conjunción", "Disyunción", "Condicional", "Bicondicional"]
+    },
+    {
+      "id": "prioridad-y-evaluacion",
+      "title": "Reglas de prioridad y valor de verdad",
+      "subtopics": ["Reglas de prioridad", "Uso de paréntesis", "Evaluación de expresiones lógicas"]
+    }
+  ]
+}

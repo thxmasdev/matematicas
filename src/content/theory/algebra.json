@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "moduleId": "module-05-algebra",
+  "moduleSlug": "expresiones-algebraicas",
+  "title": "Unidad 5: Expresiones Algebraicas y Polinomios",
+  "sections": [
+    {
+      "id": "polinomios-operaciones",
+      "topicId": "polinomios",
+      "title": "Polinomios y Operaciones Fundamentales",
+      "content": "Un **polinomio** en una indeterminada $x$ con coeficientes reales es una expresión de la forma:\n$$\nP(x) = a_n x^n + a_{n-1} x^{n-1} + \\\\dots + a_1 x + a_0\n$$\ndonde $n \\\\in \\\\mathbb{N}_0$ y los coeficientes $a_i \\\\in \\\\mathbb{R}$. Si $a_n \\\\neq 0$, $n$ es el **grado** del polinomio ($\\\\mathrm{gr}(P) = n$), $a_n$ es el **coeficiente principal** y $a_0$ es el **término independiente**.\n\n### Operaciones con Polinomios\n* **Suma y Resta**: Se suman o restan exclusivamente los coeficientes de los monomios de igual grado (monomios semejantes).\n* **Multiplicación**: Se aplica la propiedad distributiva del producto respecto de la suma y la propiedad del producto de potencias de igual base ($x^m \\\\cdot x^n = x^{m+n}$):\n  $$\n  \\\\mathrm{gr}(P \\\\cdot Q) = \\\\mathrm{gr}(P) + \\\\mathrm{gr}(Q)\n  $$\n* **División entera**: Dados dos polinomios $P(x)$ (dividendo) y $Q(x) \\\\neq 0$ (divisor), existen únicos polinomios $C(x)$ (cociente) y $R(x)$ (resto) tales que:\n  $$\n  P(x) = Q(x) \\\\cdot C(x) + R(x) \\quad \\\\text{con } \\\\mathrm{gr}(R) < \\\\mathrm{gr}(Q) \\\\text{ o } R(x) = 0\n  $$",
+      "callouts": [
+        {
+          "type": "tip",
+          "title": "Completar y ordenar",
+          "content": "Para realizar divisiones largas de polinomios, es imprescindible ordenar los polinomios en potencias decrecientes y completarlos con coeficientes 0 para los términos ausentes."
+        }
+      ],
+      "examples": [
+        {
+          "title": "Producto de polinomios",
+          "statement": "Efectuar $(2x - 3)(x^2 + 4)$.",
+          "solution": "Distribuimos:\n$(2x)(x^2) + (2x)(4) - 3(x^2) - 3(4) = 2x^3 + 8x - 3x^2 - 12$.\nOrdenamos: $2x^3 - 3x^2 + 8x - 12$.",
+          "explanation": "El grado del polinomio producto es $1 + 2 = 3$."
+        }
+      ]
+    },
+    {
+      "id": "ruffini-resto-raices",
+      "topicId": "ruffini-y-resto",
+      "title": "Regla de Ruffini y Teorema del Resto",
+      "content": "### Regla de Ruffini\nEs un algoritmo abreviado para dividir un polinomio $P(x)$ por un binomio mónico de primer grado de la forma $(x - a)$:\n1. Se completa y ordena el polinomio dividendo $P(x)$.\n2. Se colocan sus coeficientes en una fila y el valor $a$ en el ángulo izquierdo.\n3. Se baja el coeficiente principal, se multiplica por $a$, se suma a la siguiente columna y se repite sucesivamente.\n4. La última cifra obtenida es el resto $R$ y los números precedentes son los coeficientes del cociente $C(x)$ (cuyo grado es $\\\\mathrm{gr}(P) - 1$).\n\n### Teorema del Resto\nEl resto de la división de un polinomio $P(x)$ por un binomio de la forma $(x - a)$ es igual al valor numérico que toma el polinomio al sustituir $x$ por $a$:\n$$\nR = P(a)\n$$\n\n### Raíces de un Polinomio\nUn número real $a$ es **raíz o cero** de un polinomio $P(x)$ si y solo si $P(a) = 0$. En tal caso, por el teorema del resto, $P(x)$ es exactamente divisible por $(x - a)$ (el resto es 0).",
+      "callouts": [
+        {
+          "type": "remember",
+          "title": "Signo de $a$",
+          "content": "Si el divisor es $(x + 3)$, se debe considerar $a = -3$, pues $(x + 3) = (x - (-3))$. El resto será $P(-3)$."
+        }
+      ],
+      "examples": [
+        {
+          "title": "Cálculo del resto sin dividir",
+          "statement": "Hallar el resto de dividir $P(x) = 2x^3 - 5x + 4$ por $Q(x) = x - 2$.",
+          "solution": "Por el teorema del resto, con $a = 2$:\n$R = P(2) = 2(2)^3 - 5(2) + 4 = 2(8) - 10 + 4 = 16 - 10 + 4 = 10$.",
+          "explanation": "El resto es 10; como no es nulo, $P(x)$ no es divisible por $(x - 2)$."
+        }
+      ]
+    },
+    {
+      "id": "factorizacion-polinomios",
+      "topicId": "factorizacion",
+      "title": "Casos de Factorización de Polinomios",
+      "content": "Factorizar un polinomio consiste en transformarlo en un producto de polinomios primos o irreducibles:\n\n1. **Factor común**: Se extrae el máximo común divisor de los coeficientes y las letras comunes elevadas a su menor exponente: $ab + ac = a(b + c)$.\n2. **Diferencia de cuadrados**: Dos términos al cuadrado restados equivalen al producto de la suma por la diferencia de sus bases:\n   $$\n   a^2 - b^2 = (a - b)(a + b)\n   $$\n3. **Trinomio cuadrado perfecto**: Corresponde al desarrollo del cuadrado de un binomio:\n   $$\n   a^2 \\\\pm 2ab + b^2 = (a \\\\pm b)^2\n   $$\n4. **Cuatrinomio cubo perfecto**: Corresponde al desarrollo del cubo de un binomio:\n   $$\n   a^3 \\\\pm 3a^2b + 3ab^2 \\\\pm b^3 = (a \\\\pm b)^3\n   $$\n5. **Trinomio de segundo grado**: Si $ax^2 + bx + c$ tiene raíces reales $x_1$ y $x_2$, se factoriza como $a(x - x_1)(x - x_2)$.",
+      "callouts": [
+        {
+          "type": "tip",
+          "title": "Verificación por producto",
+          "content": "Para comprobar si una factorización es correcta, basta con aplicar la propiedad distributiva y verificar que se recupera el polinomio original."
+        }
+      ],
+      "examples": [
+        {
+          "title": "Diferencia de cuadrados",
+          "statement": "Factorizar $9x^2 - 25$.",
+          "solution": "Identificamos las bases: $\\\\sqrt{9x^2} = 3x$ y $\\\\sqrt{25} = 5$.\n$9x^2 - 25 = (3x - 5)(3x + 5)$.",
+          "explanation": "Aplicación directa de $a^2 - b^2 = (a-b)(a+b)$."
+        }
+      ]
+    },
+    {
+      "id": "expresiones-fraccionarias",
+      "topicId": "expresiones-fraccionarias",
+      "title": "Expresiones Algebraicas Fraccionarias",
+      "content": "Una **expresión algebraica fraccionaria** es el cociente de dos polinomios $\\\\frac{P(x)}{Q(x)}$ con $Q(x) \\\\neq 0$.\n\n* **Dominio de definición**: Son todos los números reales que no anulan al denominador:\n  $$\n  \\\\mathrm{Dom} = \\\\mathbb{R} - \\\\{x \\\\in \\\\mathbb{R} \\\\mid Q(x) = 0\\\\}\n  $$\n* **Simplificación**: Se factorizan tanto el numerador como el denominador y se cancelan los factores comunes presentes en ambos (dentro de su dominio de validez):\n  $$\n  \\\\frac{x^2 - 4}{x - 2} = \\\\frac{(x - 2)(x + 2)}{x - 2} = x + 2 \\quad (x \\\\neq 2)\n  $$\n* **Operaciones**: Se aplican las mismas reglas que para las fracciones numéricas, calculando el mínimo común múltiplo (m.c.m.) de los denominadores factorizados para sumas y restas.",
+      "callouts": [
+        {
+          "type": "warning",
+          "title": "Restricción de dominio",
+          "content": "Nunca se debe simplificar una variable sin recordar que el denominador original no puede ser cero. Por ejemplo, $\\\\frac{x}{x} = 1$ solo es válido para $x \\\\neq 0$."
+        }
+      ],
+      "examples": [
+        {
+          "title": "Simplificación con trinomio cuadrado perfecto",
+          "statement": "Simplificar $\\\\frac{x^2 - 6x + 9}{x^2 - 9}$.",
+          "solution": "1. Factorizamos numerador: $x^2 - 6x + 9 = (x - 3)^2$.\n2. Factorizamos denominador: $x^2 - 9 = (x - 3)(x + 3)$.\n3. Cancelamos $(x - 3)$: $\\\\frac{(x - 3)^2}{(x - 3)(x + 3)} = \\\\frac{x - 3}{x + 3}$ (para $x \\\\neq \\\\pm 3$).",
+          "explanation": "Queda expresada como fracción irreducible."
+        }
+      ]
+    }
+  ]
+}
