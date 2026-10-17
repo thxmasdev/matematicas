@@ -134,9 +134,9 @@ export default async function ModulePage({
                           <MathRenderer content={ex.solution} />
                         </div>
                         {ex.explanation && (
-                          <p className="mt-1.5 text-muted">
+                          <div className="mt-1.5 text-muted">
                             <MathRenderer content={ex.explanation} />
-                          </p>
+                          </div>
                         )}
                       </div>
                     ))}

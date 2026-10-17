@@ -55,20 +55,20 @@ export default function ScoreboardPage() {
         <Scoreboard compact={false} />
       </section>
 
-      {/* Explicación de almacenamiento y exportación */}
+      {/* Explicación de almacenamiento y sincronización */}
       <div className="rounded-2xl border border-border bg-surface p-6 text-xs text-muted space-y-2">
         <h3 className="font-bold text-foreground text-sm flex items-center gap-2">
-          <span>💾</span> ¿Cómo se guardan estos datos?
+          <span>⚡</span> ¿Cómo se guardan y comparten estos datos?
         </h3>
         <p>
-          Todos los ejercicios, puntos y nombres están almacenados en la base de datos interna de tu navegador (<strong>IndexedDB</strong>) bajo la tabla de historial. Si varias personas usan esta misma máquina o navegador, cada una puede seleccionar su nombre para registrar sus intentos por separado.
+          Tus intentos y puntos se guardan localmente en tu dispositivo (<strong>IndexedDB</strong>) para que la app funcione sin conexión y de forma inmediata, y se sincronizan automáticamente con la base de datos en la nube de <strong>Supabase</strong> para que tu posición en el ranking sea visible desde cualquier teléfono, tablet o computadora.
         </p>
         <p>
-          Podés descargar una copia de seguridad en formato <strong>.json</strong> desde la sección de{" "}
+          También podés descargar una copia de seguridad en formato <strong>.json</strong> desde la sección de{" "}
           <Link href="/configuracion" className="text-accent underline font-semibold">
             Configuración
           </Link>{" "}
-          para respaldar o transferir este Scoreboard a otro dispositivo.
+          para respaldar tus estadísticas en cualquier momento.
         </p>
       </div>
     </div>

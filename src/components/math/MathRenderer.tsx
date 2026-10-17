@@ -5,6 +5,7 @@ interface MathRendererProps {
   content: string;
   className?: string;
   inline?: boolean;
+  as?: "div" | "span";
 }
 
 /**
@@ -13,7 +14,7 @@ interface MathRendererProps {
  * - $expresión$   -> modo en línea (displayMode: false)
  * - texto plano   -> escapado como texto React
  */
-export const MathRenderer: React.FC<MathRendererProps> = React.memo(({ content, className, inline }) => {
+export const MathRenderer: React.FC<MathRendererProps> = React.memo(({ content, className, inline, as = "div" }) => {
   if (!content) return null;
 
   // Si se solicita modo inline explícito para una fórmula completa sin signos de $
@@ -65,8 +66,10 @@ export const MathRenderer: React.FC<MathRendererProps> = React.memo(({ content, 
     });
   }
 
+  const Component = as;
+
   return (
-    <div className={className}>
+    <Component className={className}>
       {tokens.map((token, idx) => {
         if (token.type === "text") {
           return <span key={idx}>{token.raw}</span>;
@@ -97,7 +100,7 @@ export const MathRenderer: React.FC<MathRendererProps> = React.memo(({ content, 
           />
         );
       })}
-    </div>
+    </Component>
   );
 });
 

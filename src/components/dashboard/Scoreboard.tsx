@@ -4,10 +4,11 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { HistoryRepository } from "@/storage/repositories";
 import {
-  computeScoreboard,
   DEFAULT_USER_NAME,
   getActiveUser,
+  getLiveScoreboard,
 } from "@/storage/scoreboard";
+import { isSupabaseConfigured } from "@/lib/supabase";
 import type { UserScoreboardEntry } from "@/storage/types";
 import { UserModal } from "@/components/user/UserModal";
 
@@ -21,6 +22,7 @@ export const Scoreboard: React.FC<ScoreboardProps> = ({ compact = false }) => {
   const [loading, setLoading] = useState(true);
   const [activeUser, setActiveUser] = useState<string>(DEFAULT_USER_NAME);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const isCloud = isSupabaseConfigured();
 
   const loadData = async () => {
     try {
@@ -29,7 +31,7 @@ export const Scoreboard: React.FC<ScoreboardProps> = ({ compact = false }) => {
         historyRepo.listAll(),
         getActiveUser(),
       ]);
-      const scoreboard = computeScoreboard(records);
+      const scoreboard = await getLiveScoreboard(records);
       setEntries(scoreboard);
       setActiveUser(current);
     } catch {
@@ -49,7 +51,7 @@ export const Scoreboard: React.FC<ScoreboardProps> = ({ compact = false }) => {
           getActiveUser(),
         ]);
         if (active) {
-          const scoreboard = computeScoreboard(records);
+          const scoreboard = await getLiveScoreboard(records);
           setEntries(scoreboard);
           setActiveUser(current);
         }
@@ -82,9 +84,21 @@ export const Scoreboard: React.FC<ScoreboardProps> = ({ compact = false }) => {
               <h2 className="text-xl font-extrabold text-foreground tracking-tight">
                 Scoreboard de Estudiantes
               </h2>
+              {isCloud ? (
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/25 px-2 py-0.5 text-[10px] font-semibold text-emerald-400">
+                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                  Nube Supabase
+                </span>
+              ) : (
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-surface-2 border border-border px-2 py-0.5 text-[10px] font-semibold text-muted">
+                  💾 Local
+                </span>
+              )}
             </div>
             <p className="text-xs text-muted">
-              Puntos y efectividad de todas las personas que practican en este dispositivo.
+              {isCloud
+                ? "Ranking global de aspirantes compartido en tiempo real entre todos los dispositivos."
+                : "Puntos y efectividad de todas las personas que practican en este dispositivo."}
             </p>
           </div>
 

@@ -1,4 +1,5 @@
 import { AppError } from "@/lib/errors";
+import { syncHistoryRecordToSupabase } from "@/lib/supabase";
 import { getDb, type AppDatabase } from "./database";
 import {
   historyRecordSchema,
@@ -48,13 +49,19 @@ export class HistoryRepository {
     const parsed = historyRecordSchema.parse(record);
     return wrap(async () => {
       const db = this.db();
-      return db.transaction("rw", db.history, db.progress, async () => {
+      const added = await db.transaction("rw", db.history, db.progress, async () => {
         if (await db.history.get(parsed.id)) return false;
         await db.history.add(parsed);
         const key = progressKey(parsed.moduleId, parsed.topicId);
         await db.progress.put(applyAttempt(await db.progress.get(key), parsed));
         return true;
       });
+
+      if (added) {
+        // Sincronizar en segundo plano con Supabase si está disponible
+        void syncHistoryRecordToSupabase(parsed);
+      }
+      return added;
     });
   }
 

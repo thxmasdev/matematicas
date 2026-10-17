@@ -1,6 +1,11 @@
 import { getDb } from "./database";
 import { SettingsRepository } from "./repositories";
 import type { Difficulty, ExerciseHistoryRecord, UserScoreboardEntry } from "./types";
+import {
+  fetchScoreboardFromSupabase,
+  isSupabaseConfigured,
+  syncScoreboardProfileToSupabase,
+} from "@/lib/supabase";
 
 export const DEFAULT_USER_NAME = "Usuario Anónimo";
 export const STORAGE_KEY_ACTIVE_USER = "active_user_name";
@@ -177,4 +182,51 @@ export function computeScoreboard(
   });
 
   return results;
+}
+
+/**
+ * Obtiene el Scoreboard unificado:
+ * - Si Supabase está configurado, consulta los perfiles globales en la nube compartidos entre todos los dispositivos.
+ * - Si hay cambios o intentos locales no sincronizados, los actualiza en segundo plano.
+ * - Si está sin configurar o sin conexión, recurre al cálculo local en IndexedDB.
+ */
+export async function getLiveScoreboard(
+  history: readonly ExerciseHistoryRecord[],
+): Promise<UserScoreboardEntry[]> {
+  const localList = computeScoreboard(history);
+
+  if (isSupabaseConfigured()) {
+    try {
+      const remoteList = await fetchScoreboardFromSupabase();
+      if (remoteList && remoteList.length > 0) {
+        const userMap = new Map<string, UserScoreboardEntry>();
+        for (const entry of remoteList) {
+          userMap.set(entry.userName, entry);
+        }
+
+        // Combinar con perfiles locales activos
+        for (const local of localList) {
+          const remote = userMap.get(local.userName);
+          if (!remote || local.score > remote.score || local.totalAttempts > remote.totalAttempts) {
+            userMap.set(local.userName, local);
+            // Sincronizar actualización más reciente a Supabase
+            void syncScoreboardProfileToSupabase(local);
+          }
+        }
+
+        const merged = Array.from(userMap.values());
+        merged.sort((a, b) => {
+          if (b.score !== a.score) return b.score - a.score;
+          if (b.accuracy !== a.accuracy) return b.accuracy - a.accuracy;
+          return b.totalAttempts - a.totalAttempts;
+        });
+
+        return merged;
+      }
+    } catch {
+      // Fallback a local
+    }
+  }
+
+  return localList;
 }
