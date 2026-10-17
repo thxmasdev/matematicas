@@ -43,54 +43,19 @@ El contenido está dividido en las 7 unidades de la cartilla universitaria:
 
 ---
 
-## Instalación y ejecución local
+## Acceso en línea
 
-### Requisitos
-- Node.js 18.18+ (recomendado Node 20 LTS o superior)
-- npm 9+
+La aplicación se encuentra desplegada y lista para usar en:
 
-### Pasos
+👉 **[https://matematicas-unse.vercel.app/](https://matematicas-unse.vercel.app/)**
 
-1. Clonar el repositorio:
-```bash
-git clone https://github.com/thxmasdev/matematicas.git
-cd matematicas
-```
-
-2. Instalar dependencias:
-```bash
-npm install
-```
-
-3. Iniciar el servidor de desarrollo:
-```bash
-npm run dev
-```
-La aplicación estará disponible en [http://localhost:3000](http://localhost:3000).
+No requiere registro previo ni instalación. Al ingresar, todo el progreso y las estadísticas se gestionan directamente en tu navegador.
 
 ---
 
-## Scripts disponibles
+## Autor
 
-```bash
-# Desarrollo local
-npm run dev
-
-# Chequeo de tipos TypeScript
-npm run typecheck
-
-# Linter (ESLint)
-npm run lint
-
-# Ejecutar tests unitarios
-npm test
-
-# Ejecutar pipeline completa de validación (typecheck + lint + test)
-npm run validate
-
-# Compilar y exportar bundle estático a la carpeta out/
-npm run build
-```
+Desarrollado por [thxmasdev](https://github.com/thxmasdev).
 
 ---
 
